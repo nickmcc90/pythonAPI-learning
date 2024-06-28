@@ -15,3 +15,56 @@ open it by right clicking the url given to you by the terminal. This should open
 up a window with the route.
 
 We just created our first route inside of a flask.
+
+With the def home()
+
+---
+
+Now let's take a look at other http methods to put into routes.
+
+POST => create a resource
+GET => request data to read from a specified resource
+PUT => update a resource
+DELETE => delete a resource
+
+In our more complicated GET route, we have a path parameter. This is a dynamic
+value that you can pass in the path of a url that you'll be able to access
+inside of your route. We can include query parameters after a ? to specialize
+the data even more. We return the requested data with a status code at the end.
+
+A status code for success is 200.
+
+--
+
+Let's do a POST method. We need to include methods=[] after the path. We can
+include many methods like GET and POST, but for now we'll just do POST.
+For a POST, the user will send the route some JSON. We need to receive this
+JSON as the API. Then, we'd put this info into a database. Then, we return
+the data back to them that they sent as confirmation that the post was
+successful. 
+
+We can't really test the POST method, without a little software called Postman.
+
+Let's talk about testing APIs.
+
+---
+
+A good API testing software is called Postman. We can open up Postman, click
+the plus to create a new request, and paste the development server link given 
+to us by the command terminal into the search bar.
+
+We make sure the type is post, and we put in after our url:
+/create-user
+because thats what our POST request is called in main.py.
+
+We go to the body section and click raw data, just to demonstrate some quick
+JSON data being sent to the route. As expected, when we send a JSON object to POST,
+we get the data returned just like we coded.
+
+This concludes the simple structure of an API.
+
+Video url: https://www.youtube.com/watch?v=zsYIw6RXjfM&t=228s
+<timestamp 12:00>
+
+We can learn about making a complex REST api in flask to expound upon this concept first,
+then do a FAST API tutorial.
