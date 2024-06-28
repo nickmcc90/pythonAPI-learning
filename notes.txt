@@ -1,0 +1,17 @@
+Hello! 6/28/24
+
+We will be using Flask to make our API in python.
+
+To set up Flask, type in the VS code terminal for Mac:
+
+pip3 install flask
+
+Now its time to create our flask application. Flask is the server that runs the API.
+
+After we do the first initialization of everything, and create our first route, we can
+run this. For Mac users, go in the VS terminal and type python3 main.py, or whatever
+the file name is called. This will create a development server upon which you can
+open it by right clicking the url given to you by the terminal. This should open
+up a window with the route.
+
+We just created our first route inside of a flask.
