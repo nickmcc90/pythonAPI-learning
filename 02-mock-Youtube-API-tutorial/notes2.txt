@@ -1,0 +1,52 @@
+This is like a mock Youtube API. We are going to be dealing
+with channels and videos. We'll be able to create videos,
+give info on them, delete or update them, or link videos
+to channels.
+
+<timestamp: 2:45>
+
+For this project, we'll need to download a few things other than
+just flask from pip3 like we did in the first API tutorial.
+
+* We already did pip3 install flask
+pip install Flask-RESTful
+
+Make a requirements.txt file, then in the terminal,
+type in pip3 install -r requirements.txt after navigating to the
+folder that this file is in.
+
+Also, put pip install Flask-RESTful in the terminal.
+
+Doing this didn't work for me, but I just copy and pasted the dude's
+code into requirements.txt, so.
+
+Let's get started.
+
+---
+
+First we init the app with the normal stuff, with the only addition from
+last time being the usage of Api().
+
+Let's create our first resource called HelloWorld.
+
+**We can test the HelloWorld endpoints in the test.py we made. We grab the development
+server url and save it to a variable, and add paths to that, and do something like
+      response = requests.get(BASE + 'path')
+        or
+      response = requests.post(BASE + 'path')
+
+Then we print(response.json()) to see the endpoint's behavior.
+
+Also make sure that what you are returning is an object, bc that is jsonify-able.
+**
+
+Tips:
+Remeber the path parameters are in <>. With this setup, we define the type of data being passed
+in. So like <string:name>, or <int:id>
+
+When having more and more parameters, using test.py can get clunkly with the response equals line.
+Make sure to have your slashes and paths correct.
+
+PRACTICE 1
+When the user sends us a name, return to them any information relating to a stored
+name dictionary that you make in main2.py.
